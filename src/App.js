@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './HelloWorld';
+import Counter from './Counter';
+
+import FilteredList from './FilteredList';
+const produce =
+  [
+    { name: "Apple", type: "Fruit" },
+    { name: "Pineapple", type: "Fruit" },
+    { name: "Banana", type: "Fruit" },
+    { name: "Pear", type: "Fruit" },
+    { name: "Strawberry", type: "Fruit" },
+    { name: "Orange", type: "Fruit" },
+    { name: "Lettuce", type: "Vegetable" },
+    { name: "Cucumber", type: "Vegetable" },
+    { name: "Eggplant", type: "Vegetable" },
+    { name: "Squash", type: "Vegetable" },
+    { name: "Bell pepper", type: "Vegetable" },
+    { name: "Onion", type: "Vegetable" },
+  ]; 
+
 
 function App() {
+  console.log(produce[0].name);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HelloWorld name={'Triet Luu'}/>
+
+      <Counter  />
+
+      <FilteredList items={produce} />
+    
     </div>
   );
 }
